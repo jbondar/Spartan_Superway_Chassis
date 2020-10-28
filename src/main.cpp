@@ -18,7 +18,7 @@ HardwareSerial* serialPort1 = &Serial1;
 
 float duty = 0.3;
 float duty2 = 0.6;
-
+Serial.print("GithubForTheBoys")
 void setup()
 {
   Serial.begin(115200);
