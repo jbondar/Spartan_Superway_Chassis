@@ -8,8 +8,7 @@
 
 #include <Arduino.h>
 #include <VescUart.h>
-// Creat VescUart object to provide access to
-// the class functions
+//Creat VescUart object to provide access tof the class functions
 
 VescUart UART;
 VescUart UART1;
@@ -18,14 +17,12 @@ HardwareSerial* serialPort1 = &Serial1;
 
 float duty = 0.6;
 float duty2 = 0.6;
-// hello world this is a useless commit for useless boys
-// Fuck Git
 
 void setup()
 {
   Serial.begin(115200);
-  Serial1.begin(115200, SERIAL_8N1, 16, 17);
-  Serial2.begin(115200, SERIAL_8N1, 23, 22);
+  Serial1.begin(115200, SERIAL_8N1, 16, 17);  //UART: Rx, Tx
+  Serial2.begin(115200, SERIAL_8N1, 23, 22);  // UART1: Rx1, Tx1
   while (!Serial2 && !Serial1) {;}
   UART.setSerialPort(serialPort);
   UART1.setSerialPort(serialPort1);
@@ -33,28 +30,30 @@ void setup()
 
 void loop()
 {
-  if (UART.getVescValues()) 
-  {    
-    UART.setDuty(duty);      
+  Serial.println(duty);
+  Serial.println("Failed to get data!");
+  UART.setDuty(duty);
+  if (UART.getVescValues())
+  {   
     Serial.println("Printing Vesc  1 Values: ");
     Serial.println(UART.data.avgMotorCurrent);
-    Serial.println(UART.getVescValues.Current)
-    
-    T.data.avgInputCurrent);
+    Serial.println(UART.data.avgInputCurrent);
     Serial.println(UART.data.rpm);
     Serial.println(UART.data.inpVoltage);
     Serial.println(UART.data.ampHours);
     Serial.println(UART.data.tachometerAbs);
     Serial.println("Finished Vesc  1 Values: ");       
   }
-  else
+  float duty = 0.8;
+  delay(1000);
+  UART.setDuty(duty);
+  
   {
     Serial.println("Failed to get data!");
   }
-
+  UART1.setDuty(duty2);
   if(UART1.getVescValues())
   {
-    UART1.setDuty(duty2);
     Serial.println("Printing Vesc  2 Values: ");
     Serial.println(UART1.data.avgMotorCurrent);
     Serial.println(UART1.data.avgInputCurrent);
