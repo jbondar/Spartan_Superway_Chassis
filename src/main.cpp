@@ -16,9 +16,10 @@ VescUart UART1;
 HardwareSerial* serialPort = &Serial2;
 HardwareSerial* serialPort1 = &Serial1;
 
-float duty = 0.3;
+float duty = 0.6;
 float duty2 = 0.6;
 // hello world this is a useless commit for useless boys
+// Fuck Git
 
 void setup()
 {
