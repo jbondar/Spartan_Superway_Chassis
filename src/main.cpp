@@ -18,7 +18,8 @@ HardwareSerial* serialPort1 = &Serial1;
 
 float duty = 0.3;
 float duty2 = 0.6;
-Serial.print("GithubForTheBoys")
+// hello world this is a useless commit for useless boys
+
 void setup()
 {
   Serial.begin(115200);
@@ -36,7 +37,9 @@ void loop()
     UART.setDuty(duty);      
     Serial.println("Printing Vesc  1 Values: ");
     Serial.println(UART.data.avgMotorCurrent);
-    Serial.println(UART.data.avgInputCurrent);
+    Serial.println(UART.getVescValues.Current)
+    
+    T.data.avgInputCurrent);
     Serial.println(UART.data.rpm);
     Serial.println(UART.data.inpVoltage);
     Serial.println(UART.data.ampHours);
