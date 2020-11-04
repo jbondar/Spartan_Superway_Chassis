@@ -3,7 +3,7 @@
  ** AUTHOR: Carlos Ortega & Lucas Lim & Logan Fansler                                                             **
  ** CREATED: 2020-09-21                                                                                          **
  ** REVISED: 2020-09-29                                                                                          **
- ** DESCRIPTION: This file contains the code to communicate to the VESC 6 through UART.                      **
+ ** DESCRIPTION: This file contains the code to communicate to the VESC 6 through UART                      **
  ******************************************************************************************************************/
 
 #include <Arduino.h>
