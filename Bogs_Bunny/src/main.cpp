@@ -5,10 +5,9 @@
  ** REVISED: 2020-09-29                                                                                          **
  ** DESCRIPTION: This file contains the code to communicate to the VESC 6 through UART                      **
  ******************************************************************************************************************/
-serial.print('Boobs')
+
 #include <Arduino.h>
 #include <VescUart.h>
-serial.print('tits')
 //Creat VescUart object to provide access tof the class functions
 
 VescUart UART;
